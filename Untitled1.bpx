@@ -1,0 +1,17 @@
+' {$STAMP BS2px}
+' {$PBASIC 2.5}
+
+Rx   PIN  6
+Tx   PIN  7
+
+RecData       VAR   Word
+TrackPacket   VAR   Byte(9)
+Counter       VAR   Byte
+
+
+Main:
+
+DO
+PULSIN 7, 1, RecData
+DEBUG DEC RecData, CR
+LOOP
